@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+/* body {
+
+    background: #155A7E !important;
+
+} */
+.primary {
+
+    background-color: #A2E4D9;
+}
+
+.permitido {
+
+    background-color: #45ff0752;
+
+}
+
+.naopermitido {
+    
+    background-color: #fe828200;
+
+}
+
+table tbody {
+
+    background-color: #A2E4D9;
+}

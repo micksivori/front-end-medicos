@@ -1,0 +1,51 @@
+
+<div class="container primary p-3 shadow p-3 mb-5 rounded">
+  <h2 class="text-info">Cadastrar tarefa</h2>
+  <form #formTarefa="ngForm">
+    <div class="container px-5">
+      <div class="form-row">
+        <div class="form-group col">
+          <label for="inputCity">Idade</label>
+          <input 
+              type="number"
+              class="form-control"
+              id="idade"
+              name="idade"
+              [(ngModel)]="tarefa.idade"
+              #idade='ngModel'
+              maxlength="2" 
+              required>
+        </div>
+        <div class="form-group col">
+          <label for="inputState">Sexo</label>
+          <select 
+          id="inputState" 
+          class="form-control"
+          id="sexo"
+          name="sexo"
+          [(ngModel)]="tarefa.sexo"
+          #sexo='ngModel' 
+          required
+          >
+            <option selected>Masculino</option>
+            <option>Feminino</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group text-center">
+      <input 
+        type="submit"
+        class="btn btn-success"
+        (click)="cadastrar()"
+        value="Cadastrar"
+        [disabled]="!formTarefa.form.valid">
+      <a [routerLink]="['/tarefas']"
+        class="btn btn-default">
+        <span class="glyphicon glyphicon-chevron-left" 
+          aria-hidden="true"></span> Voltar
+      </a>
+    </div>
+  </form>
+</div>
